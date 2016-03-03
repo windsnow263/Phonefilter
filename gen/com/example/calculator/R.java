@@ -10,6 +10,14 @@ package com.example.calculator;
 public final class R {
     public static final class attr {
     }
+    public static final class color {
+        public static final int addbtn_danger=0x7f040004;
+        public static final int addbtn_danger_disabled=0x7f040002;
+        public static final int addbtn_danger_disabled_edge=0x7f040003;
+        public static final int addbtn_danger_edge=0x7f040001;
+        public static final int addbtn_danger_pressed=0x7f040000;
+        public static final int text_font_white=0x7f040005;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -17,25 +25,46 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
+        public static final int addbtn_radius=0x7f050002;
     }
     public static final class drawable {
-        public static final int calculator=0x7f020000;
+        public static final int addbtn_danger_rounded=0x7f020000;
+        public static final int calculator=0x7f020001;
+        public static final int delete_pic=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f080000;
+        public static final int action_settings=0x7f090009;
+        public static final int addTelBtn=0x7f090004;
+        public static final int clearTelBtn=0x7f090005;
+        public static final int deletePic=0x7f090008;
+        public static final int eachTelPhoneNum=0x7f090007;
+        public static final int inputTelNum=0x7f090000;
+        public static final int list_phoneNum=0x7f090006;
+        public static final int switchView=0x7f090003;
+        public static final int textView=0x7f090002;
+        public static final int warpcontent=0x7f090001;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
+        public static final int input_phone_num=0x7f030000;
+        public static final int main=0x7f030001;
+        public static final int phone_num_list=0x7f030002;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
+        public static final int action_settings=0x7f060001;
+        public static final int addTel=0x7f060005;
+        public static final int app_name=0x7f060000;
+        public static final int clearTel=0x7f060006;
+        public static final int emptyPic=0x7f060007;
+        public static final int montior=0x7f060004;
+        public static final int off=0x7f060003;
+        public static final int on=0x7f060002;
+        public static final int pleaseinput=0x7f060009;
+        public static final int telphone=0x7f060008;
     }
     public static final class style {
         /** 
@@ -59,10 +88,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }

@@ -3,6 +3,12 @@
 
     <string name="app_name">Calculator</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-
+	<string name="on">开始</string>
+	<string name="off">关闭</string>
+	<string name="montior">监控：</string>
+	<string name="addTel">添加号码</string>
+	<string name="clearTel">清空号码</string>
+	<string name="emptyPic"></string>
+	<string name="telphone">电话号码：</string>
+	<string name="pleaseinput">请输入您喜欢的人的号码</string>
 </resources>
