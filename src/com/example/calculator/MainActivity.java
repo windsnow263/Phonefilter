@@ -17,11 +17,11 @@ public class MainActivity extends Activity {
 	private MyAdapter mAdapter = null;
 	private List<TelPhoneNum> mTelPhoneNum = null;//号码集合
 	private Context mContext = null;
-	private int mCounter=0;
 	Button addTelBtn = null;
 	Button clearTelBtn = null;
 	private AlertDialog alert= null;
 	private AlertDialog.Builder alertBuilder = null;
+	private Switch mSwitch = null;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				LinearLayout inputNumForm = (LinearLayout)getLayoutInflater().inflate(R.layout.input_phone_num, null);
+				final LinearLayout inputNumForm = (LinearLayout)getLayoutInflater().inflate(R.layout.input_phone_num, null);
 				alert = null;
 				alertBuilder = new AlertDialog.Builder(mContext);
 				alert = alertBuilder.setTitle("输入号码")
@@ -50,12 +50,14 @@ public class MainActivity extends Activity {
 							}
 						})
 						.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-							
+							//还需要做逻辑判断等
 							@Override
 							public void onClick(DialogInterface dialog, int which) {
-								mAdapter.add(new TelPhoneNum("测试能否成功"+ mCounter, R.drawable.delete_pic));
+								EditText et = (EditText) inputNumForm.findViewById(R.id.inputTelNum);//注意这里是inputNumForm的findViewById
+								String addTelPhone = et.getText().toString();
+								mAdapter.add(new TelPhoneNum(addTelPhone, R.drawable.delete_pic));
 								Toast.makeText(mContext, "号码添加成功~", Toast.LENGTH_SHORT).show();
-								mCounter++;
+								
 							}
 						})
 						.create();
@@ -84,7 +86,6 @@ public class MainActivity extends Activity {
 							public void onClick(DialogInterface dialog, int which) {
 								Toast.makeText(mContext, "号码已清空~", Toast.LENGTH_SHORT).show();
 								mAdapter.clear();
-								mCounter = 0;
 							}
 						})
 						.create();
@@ -98,6 +99,7 @@ public class MainActivity extends Activity {
     	phoneNum_list = (ListView) findViewById(R.id.list_phoneNum);
     	addTelBtn = (Button) findViewById(R.id.addTelBtn);
     	clearTelBtn = (Button) findViewById(R.id.clearTelBtn);
+    	mSwitch = (Switch) findViewById(R.id.switchView);
     }
 
     @Override

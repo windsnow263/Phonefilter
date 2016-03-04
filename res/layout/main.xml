@@ -22,7 +22,7 @@
         	android:layout_height="wrap_content"
         	android:textOn="@string/on"
         	android:textOff="@string/off"
-        	android:checked="true"
+        	android:checked="false"
         	android:layout_toRightOf="@id/textView"
         	android:layout_centerVertical="true"
         	android:layout_marginLeft="0dp"/>   
